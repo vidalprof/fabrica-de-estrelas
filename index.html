@@ -132,6 +132,161 @@ h1.titulo{font-size:22px;line-height:1.12;margin:14px 8px 2px;color:#ffe08a;text
   -webkit-animation:respiraDica 2.6s ease-in-out infinite;animation:respiraDica 2.6s ease-in-out infinite}
 @-webkit-keyframes respiraDica{0%,100%{opacity:.55}50%{opacity:1}}
 @keyframes respiraDica{0%,100%{opacity:.55}50%{opacity:1}}
+.mapa .fabviva.destino{position:absolute;left:50%;top:6%;width:20vh;max-width:140px;z-index:3;
+  -webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.mapa .trilha{position:absolute;top:0;left:0;right:0;bottom:0;z-index:2;pointer-events:none}
+.mapa .nowrap{position:absolute;z-index:4;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+.mapa .no{position:relative;width:12vh;max-width:74px}
+.mapa .no.feito img{-webkit-filter:drop-shadow(0 0 12px rgba(255,220,120,.95));filter:drop-shadow(0 0 12px rgba(255,220,120,.95))}
+.mapa .nowrap.alivio .no:not(.futuro) img{-webkit-filter:hue-rotate(175deg) drop-shadow(0 0 10px rgba(120,200,255,.8));filter:hue-rotate(175deg) drop-shadow(0 0 10px rgba(120,200,255,.8))}
+.mapa .nowrap.deleite .no:not(.futuro) img{-webkit-filter:hue-rotate(-45deg) drop-shadow(0 0 10px rgba(255,150,210,.8));filter:hue-rotate(-45deg) drop-shadow(0 0 10px rgba(255,150,210,.8))}
+.mapa .rotulo{position:absolute;left:50%;top:100%;margin-top:2px;-webkit-transform:translateX(-50%);transform:translateX(-50%);
+  white-space:nowrap;font-size:12px;font-weight:800;color:#fff;background:rgba(10,14,40,.72);padding:3px 9px;border-radius:11px;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.mapa .walker{position:absolute;z-index:6;-webkit-transform:translate(-50%,-92%);transform:translate(-50%,-92%);
+  -webkit-transition:left 1.1s ease,top 1.1s ease;transition:left 1.1s ease,top 1.1s ease}
+.mapa .walker .fag{position:relative;width:13vh;max-width:78px}
+
+/* ---------- PARADA (criar/resolver: grupos iguais) ---------- */
+.fagfala{position:absolute;bottom:0;right:2px;width:22vh;max-width:120px;z-index:3}
+.fagfala .fag{position:relative;width:100%;max-width:none}
+.balao{position:absolute;top:10px;left:10px;right:10px;max-width:560px;margin:0 auto;
+  background:rgba(20,24,60,.93);border:2px solid #ffd75e;border-radius:16px;padding:11px 13px;
+  font-size:15px;line-height:1.35;color:#fff;z-index:4;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+.caixas{position:absolute;left:0;right:0;top:32%;text-align:center;z-index:2;padding:0 6px}
+.caixa{display:inline-block;vertical-align:top;width:28%;max-width:150px;margin:0 1.5%;min-height:118px;
+  border:3px dashed #ffd75e;border-radius:16px;background:rgba(255,255,255,.07);padding:8px 5px 28px;position:relative;cursor:pointer}
+.caixa:active{-webkit-transform:scale(.97);transform:scale(.97)}
+.caixa .estrs{min-height:74px;line-height:1}
+.caixa .estr{width:25px;height:auto;margin:2px;cursor:pointer;
+  -webkit-animation:estrPop .32s ease;animation:estrPop .32s ease}
+@-webkit-keyframes estrPop{0%{-webkit-transform:scale(.3)}70%{-webkit-transform:scale(1.18)}100%{-webkit-transform:scale(1)}}
+@keyframes estrPop{0%{transform:scale(.3)}70%{transform:scale(1.18)}100%{transform:scale(1)}}
+.caixa .cnt{position:absolute;bottom:5px;left:0;right:0;font-weight:800;color:#ffe08a;font-size:17px}
+.p1barra{position:absolute;left:0;right:0;bottom:3%;text-align:center;z-index:4}
+.p1dica{font-size:13px;color:#ffe9a8;font-style:italic;margin-bottom:8px;min-height:1.2em}
+.btn2{border:0;cursor:pointer;font-family:inherit;font-weight:700;color:#20264a;background:#e7ebff;
+  padding:9px 18px;font-size:15px;border-radius:20px;box-shadow:0 3px 0 #9aa3d6}
+.btn2:active{-webkit-transform:translateY(2px);transform:translateY(2px);box-shadow:0 1px 0 #9aa3d6}
+.revela{position:absolute;left:0;right:0;top:26%;text-align:center;z-index:6;padding:0 14px}
+.revela .r1{font-size:24px;color:#fff;font-weight:800;margin-bottom:6px;
+  -webkit-animation:revIn .5s ease both;animation:revIn .5s ease both}
+.revela .r2{font-size:36px;color:#ffe08a;font-weight:900;text-shadow:0 0 22px rgba(255,200,80,.8);margin-bottom:12px;
+  -webkit-animation:revIn .5s .25s ease both;animation:revIn .5s .25s ease both}
+.revela .r3{font-size:16px;color:#e9ecff;-webkit-animation:revIn .5s .5s ease both;animation:revIn .5s .5s ease both}
+@-webkit-keyframes revIn{0%{opacity:0;-webkit-transform:scale(.6)}100%{opacity:1;-webkit-transform:scale(1)}}
+@keyframes revIn{0%{opacity:0;transform:scale(.6)}100%{opacity:1;transform:scale(1)}}
+.burst{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:5;overflow:hidden}
+.bstar{position:absolute;width:34px;opacity:1}
+@-webkit-keyframes bfly{0%{opacity:1;-webkit-transform:translateY(0) scale(.4) rotate(0)}100%{opacity:0;-webkit-transform:translateY(-46px) scale(1.35) rotate(140deg)}}
+@keyframes bfly{0%{opacity:1;transform:translateY(0) scale(.4) rotate(0)}100%{opacity:0;transform:translateY(-46px) scale(1.35) rotate(140deg)}}
+
+/* ---------- PARADA 2 — A Constelação (array com steppers) ---------- */
+.p2 .grade{position:absolute;left:0;right:0;top:25%;bottom:33%;z-index:2;text-align:center;
+  display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;
+  -webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center}
+.p2 .fila{white-space:nowrap;line-height:0}
+.gestr{width:30px;max-width:8.5vw;height:auto;margin:3px;-webkit-animation:estrPop .3s ease;animation:estrPop .3s ease}
+.grade.acesa .gestr{-webkit-filter:drop-shadow(0 0 9px rgba(255,220,120,.95));filter:drop-shadow(0 0 9px rgba(255,220,120,.95))}
+.steppers{position:absolute;left:0;right:0;bottom:15%;z-index:4;text-align:center}
+.stepper{display:inline-block;vertical-align:middle;margin:0 9px;text-align:center}
+.strot{font-size:13px;color:#cdd3ff;margin-bottom:5px;font-weight:700}
+.srow{white-space:nowrap}
+.sbtn{border:0;cursor:pointer;font-family:inherit;font-weight:900;color:#5a3b00;width:42px;height:42px;font-size:23px;border-radius:12px;vertical-align:middle;
+  background:-webkit-linear-gradient(top,#ffe27a,#ffc23c);background:linear-gradient(to bottom,#ffe27a,#ffc23c);box-shadow:0 3px 0 #c8871a}
+.sbtn:active{-webkit-transform:translateY(2px);transform:translateY(2px);box-shadow:0 1px 0 #c8871a}
+.sval{display:inline-block;width:42px;font-size:26px;font-weight:900;color:#ffe08a;vertical-align:middle}
+
+/* ---------- PARADA 3 — Dois jeitos (comutatividade) ---------- */
+.p3 .p3wrap{position:absolute;left:0;right:0;top:24%;bottom:24%;z-index:2;text-align:center;
+  -webkit-transition:opacity .45s ease,-webkit-transform .45s ease;transition:opacity .45s ease,transform .45s ease}
+.p3 .p3wrap.vira{opacity:.15;-webkit-transform:rotate(90deg) scale(.7);transform:rotate(90deg) scale(.7)}
+.p3 .expr{font-size:30px;font-weight:900;color:#ffe08a;margin-bottom:12px;text-shadow:0 0 16px rgba(255,200,80,.6)}
+.p3 .expr span{color:#fff}
+.gradeM{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;
+  -webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center}
+.gradeM .fila{white-space:nowrap;line-height:0;opacity:.5;-webkit-transition:opacity .25s ease;transition:opacity .25s ease}
+.gradeM .fila.acesa{opacity:1}
+.gradeM .fila.acesa .gestr{-webkit-filter:drop-shadow(0 0 9px rgba(255,220,120,.95));filter:drop-shadow(0 0 9px rgba(255,220,120,.95))}
+
+/* ---------- PARADA 4 — O Céu Grande (×10) ---------- */
+.p4 .p4sky{position:absolute;left:0;right:0;top:24%;bottom:30%;z-index:2;text-align:center;padding:0 8px;overflow:hidden}
+.cluster{display:inline-block;vertical-align:middle;width:74px;margin:5px;padding:4px;border-radius:12px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,215,110,.35);line-height:0;
+  -webkit-animation:estrPop .38s ease;animation:estrPop .38s ease}
+.cluster .cestr{width:12px;height:auto;margin:1px;
+  -webkit-filter:drop-shadow(0 0 5px rgba(255,220,120,.85));filter:drop-shadow(0 0 5px rgba(255,220,120,.85))}
+.p4 .p4expr{position:absolute;left:0;right:0;bottom:16%;z-index:4;text-align:center}
+
+/* ---------- ALÍVIO 1 — Música das Estrelas ---------- */
+.musica .sinos{position:absolute;left:0;right:0;top:32%;z-index:3;text-align:center;padding:0 6px;white-space:nowrap}
+.sino{display:inline-block;vertical-align:middle;margin:0 1.6%;cursor:pointer;
+  -webkit-transition:-webkit-transform .12s ease;transition:transform .12s ease}
+.sino.toca{-webkit-transform:translateY(-14px) scale(1.14);transform:translateY(-14px) scale(1.14)}
+.sino .grupinho{width:10vw;max-width:40px;line-height:0}
+.sino .sestr{display:block;width:100%;height:auto;margin:3px 0;-webkit-filter:drop-shadow(0 0 7px rgba(255,220,120,.85));filter:drop-shadow(0 0 7px rgba(255,220,120,.85))}
+.sino.toca .sestr{-webkit-filter:drop-shadow(0 0 14px rgba(255,240,170,1));filter:drop-shadow(0 0 14px rgba(255,240,170,1))}
+
+/* ---------- ALÍVIO 2 — Monte a Constelação (memória) ---------- */
+.memoria .memgrid{position:absolute;left:0;right:0;top:24%;bottom:22%;z-index:3;text-align:center;padding:0 8px;
+  display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;
+  -webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center}
+.mcard{position:relative;width:21%;max-width:96px;height:20vh;max-height:120px;margin:2%;cursor:pointer;border-radius:14px;
+  background:rgba(20,24,60,.55);border:2px solid rgba(255,215,110,.4)}
+.mcard .dorso,.mcard .face{position:absolute;top:0;left:0;right:0;bottom:0;
+  display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;align-items:center;
+  -webkit-transition:opacity .2s ease;transition:opacity .2s ease}
+.mcard .dorso{opacity:1} .mcard .dorso img{width:52%;opacity:.85}
+.mcard .face{opacity:0;padding:6px}
+.mcard.aberta .dorso{opacity:0} .mcard.aberta .face{opacity:1}
+.mcard.par{border-color:#8effa6;background:rgba(60,120,80,.35)}
+.mcard.par .dorso{opacity:0} .mcard.par .face{opacity:1}
+.mcard .memnum{font-size:32px;font-weight:900;color:#ffe08a;text-shadow:0 0 14px rgba(255,200,80,.6)}
+.gradeMini .fila{white-space:nowrap;line-height:0;opacity:1}
+.gradeMini .gestr{width:11px;max-width:11px;margin:1px;-webkit-filter:drop-shadow(0 0 4px rgba(255,220,120,.8));filter:drop-shadow(0 0 4px rgba(255,220,120,.8))}
+
+/* ---------- PARADA 5 — A Sua Constelação (opções de total) ---------- */
+.p5 .opts{position:absolute;left:0;right:0;bottom:11%;z-index:4;text-align:center}
+.optrow{white-space:nowrap}
+.optbtn{border:0;cursor:pointer;font-family:inherit;font-weight:900;color:#20264a;width:68px;height:58px;font-size:27px;border-radius:16px;margin:0 8px;
+  background:-webkit-linear-gradient(top,#eaf0ff,#c9d3ff);background:linear-gradient(to bottom,#eaf0ff,#c9d3ff);box-shadow:0 4px 0 #97a3d8}
+.optbtn:active{-webkit-transform:translateY(2px);transform:translateY(2px);box-shadow:0 2px 0 #97a3d8}
+.optbtn:disabled{opacity:.5}
+.p5 .p5dica{margin-top:9px;font-size:13px;color:#ffe9a8;font-style:italic;min-height:1.2em;padding:0 12px}
+
+/* ---------- DELEITE — Decore o Seu Céu ---------- */
+.decore .decoceu{position:absolute;left:0;right:0;top:22%;bottom:24%;z-index:3;cursor:crosshair}
+.decostar{position:absolute;height:auto;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-animation:estrPop .35s ease;animation:estrPop .35s ease}
+.decore .paleta{position:absolute;left:0;right:0;bottom:14%;z-index:4;text-align:center}
+.pcor{border:0;background:transparent;cursor:pointer;width:52px;height:52px;padding:4px;margin:0 5px;border-radius:12px}
+.pcor img{width:100%;height:auto;display:block}
+.pcor.sel{background:rgba(255,255,255,.16);box-shadow:0 0 0 2px #ffd75e inset}
+
+/* ---------- FINAL (cutscene) ---------- */
+.fim{text-align:center}
+.fim .fabviva.destino{position:absolute;left:50%;top:4%;width:24vh;max-width:158px;z-index:3;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.fim .fimfag{position:absolute;left:50%;bottom:20%;width:30vh;max-width:196px;z-index:5;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.fim .fimfag .fag{position:relative;width:100%;max-width:none}
+.fim .fimtit{position:absolute;left:0;right:0;top:30%;z-index:6;padding:0 18px;font-size:26px;font-weight:900;color:#ffe08a;
+  text-shadow:0 2px 0 #7a5200,0 0 20px rgba(255,200,80,.6);-webkit-animation:revIn .6s ease both;animation:revIn .6s ease both}
+.fim .fimsub{position:absolute;left:0;right:0;top:40%;z-index:6;padding:0 24px;font-size:16px;color:#e9ecff;
+  -webkit-animation:revIn .6s .3s ease both;animation:revIn .6s .3s ease both}
+@media (min-width:480px){ .fim .fimtit{font-size:32px} }
+
+/* ---------- PARECER (diploma + professor) ---------- */
+.parecer{overflow-y:auto;-webkit-overflow-scrolling:touch}
+.parecer .diploma{position:relative;margin:8% auto 12px;max-width:400px;width:88%;z-index:4;text-align:center;
+  background:-webkit-linear-gradient(top,rgba(30,26,66,.95),rgba(20,18,50,.95));background:linear-gradient(to bottom,rgba(30,26,66,.95),rgba(20,18,50,.95));
+  border:3px solid #ffd75e;border-radius:20px;padding:18px 16px 16px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.parecer .selo{width:64px;height:64px;margin:0 auto 6px;border-radius:50%;background:url('img/estrela_grande.png') center/78% no-repeat,radial-gradient(circle,#ffe08a,#f0a92e);
+  box-shadow:0 0 18px rgba(255,200,80,.7)}
+.parecer .dtit{font-size:24px;color:#ffe08a;text-shadow:0 0 14px rgba(255,200,80,.5);margin-bottom:6px}
+.parecer .dsub{font-size:14px;color:#e9ecff;line-height:1.4}
+.parecer .destrelas{margin-top:8px;color:#ffe08a;font-size:22px;letter-spacing:3px}
+.parecer .profcard{position:relative;margin:0 auto 70px;max-width:400px;width:88%;z-index:4;
+  background:rgba(12,16,40,.9);border:1px solid rgba(255,215,110,.4);border-radius:16px;padding:14px 15px;
+  font-size:13.5px;line-height:1.5;color:#dfe3ff}
+.parecer .profcard b{color:#ffe08a}
+.parecer .pobs{display:block;margin-top:8px;font-size:11.5px;color:#9aa3c8;font-style:italic}
 
 /* "reduzir movimento" desliga só os movimentos GRANDES (parallax/câmera/entradas);
    a vida gentil (respirar, piscar, brilho, estrelas) fica sempre ligada. */
@@ -216,9 +371,38 @@ function fagViva(extraCls){
   var pisca=el("img","lay pisca"); pisca.src="img/fagulha_pisca.png"; pisca.alt="";
   corpo.appendChild(base); corpo.appendChild(fala); corpo.appendChild(pisca);
   wrap.appendChild(corpo); bob.appendChild(wrap); fag.appendChild(bob);
-  fagAtual={el:fag,extra:(extraCls||""),fala:fala,pisca:pisca};
+  fagAtual={el:fag,extra:(extraCls||""),base:base,fala:fala,pisca:pisca};
   return fag;
 }
+function fagPose(nome){ if(fagAtual&&fagAtual.base){ if(fagAtual.fala)fagAtual.fala.style.opacity="0"; if(fagAtual.pisca)fagAtual.pisca.style.opacity="0"; fagAtual.base.src="img/"+nome+".png"; } }
+function fagComemora(){ fagPose("fagulha_comemora"); }
+
+/* ---- helpers de celebração (compartilhados pelas paradas) ---- */
+function estouraEstrelas(tela,n){
+  var burst=el("div","burst"),i;
+  for(i=0;i<n;i++){ var b=el("img","bstar"); b.src="img/estrela_grande.png";
+    var ang=(i/n)*2*Math.PI, dx=Math.cos(ang)*44, dy=Math.sin(ang)*30;
+    b.style.left=(50+dx)+"%"; b.style.top=(40+dy)+"%";
+    var dur=(0.8+Math.random()*0.5).toFixed(2);
+    b.style.webkitAnimation="bfly "+dur+"s ease-out both"; b.style.animation="bfly "+dur+"s ease-out both";
+    burst.appendChild(b);
+  }
+  tela.appendChild(burst);
+  setTimeout(function(){ if(burst.parentNode)burst.parentNode.removeChild(burst); },1700);
+}
+function revela(tela,r1,r2,r3){
+  var rev=el("div","revela");
+  rev.innerHTML="<div class='r1'>"+r1+"</div><div class='r2'>"+r2+"</div><div class='r3'>"+r3+"</div>";
+  tela.appendChild(rev); return rev;
+}
+function botaoProxima(tela,idx,rot){
+  setTimeout(function(){
+    var pb=el("div","p1barra"); pb.style.bottom="6%";
+    var nx=el("button","btn pulsa",rot||"Próxima parada"); nx.onclick=function(){ proxima(idx); };
+    pb.appendChild(nx); tela.appendChild(pb);
+  },1500);
+}
+function salvaEvid(ev){ try{ var f=JSON.parse(localStorage.getItem("estrelas_evid")||"[]"); f.push(ev); localStorage.setItem("estrelas_evid",JSON.stringify(f)); }catch(e){} }
 function fabViva(){
   var f=el("div","fabviva");
   f.appendChild(el("div","glow"));
@@ -298,20 +482,583 @@ function legendaSync(leg, texto){
   requestAnimationFrame(tick);
 }
 
+/* ================= PROGRESSÃO / MAPA VIVO ================= */
+var STOPS=[
+  {id:"p1",tipo:"aprend",titulo:"As Caixas de Estrelas",fn:function(){telaParada1();}},
+  {id:"p2",tipo:"aprend",titulo:"A Constelação",fn:function(){telaParada2();}},
+  {id:"r1",tipo:"alivio",titulo:"Música das Estrelas",fn:function(){telaMusica();}},
+  {id:"p3",tipo:"aprend",titulo:"Dois Jeitos, Mesmo Céu",fn:function(){telaParada3();}},
+  {id:"p4",tipo:"aprend",titulo:"O Céu Grande",fn:function(){telaParada4();}},
+  {id:"r2",tipo:"alivio",titulo:"Monte a Constelação",fn:function(){telaMemoria();}},
+  {id:"p5",tipo:"aprend",titulo:"A Sua Constelação",fn:function(){telaParada5();}},
+  {id:"d",tipo:"deleite",titulo:"Decore o Seu Céu",fn:function(){telaDecore();}}
+];
+var progresso=0, fagPos=0;
+var POS=[[50,85],[28,75],[58,65],[31,55],[60,45],[34,35],[58,26],[44,16]];
+
+function proxima(idx){
+  if(idx+1>progresso) progresso=idx+1;
+  if(progresso>=STOPS.length){ telaFinal(); } else { telaMapa(); }
+}
+
 function telaMapa(){
   limpa();
   var t=el("div","tela mapa");
-  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(52));
-  t.appendChild(el("div","topo","<b>A jornada da Fagulha</b> &#183; encha o céu de estrelas!"));
-  var fv=fabViva(); fv.style.left="50%"; fv.style.top="15%"; fv.style.width="30vh"; fv.style.maxWidth="220px";
-  fv.style.webkitTransform="translateX(-50%)"; fv.style.transform="translateX(-50%)"; t.appendChild(fv);
-  var pos=[[22,58,"atual"],[50,70,"futuro"],[76,56,"futuro"]]; var k;
-  for(k=0;k<pos.length;k++){
-    var no=el("div","no "+pos[k][2]); no.style.left=pos[k][0]+"%"; no.style.top=pos[k][1]+"%";
-    var im=el("img"); im.src="img/estrela_grande.png"; no.appendChild(im); t.appendChild(no);
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(48));
+  var fv=fabViva(); fv.className="fabviva destino"; t.appendChild(fv);
+  t.appendChild(el("div","topo","<b>A jornada da Fagulha</b> &#183; parada "+Math.min(progresso+1,STOPS.length)+" de "+STOPS.length));
+  var i, pts="";
+  for(i=0;i<POS.length;i++){ pts+=POS[i][0]+","+POS[i][1]+" "; }
+  var svg=el("div","trilha");
+  svg.innerHTML="<svg viewBox='0 0 100 100' preserveAspectRatio='none' width='100%' height='100%'><polyline points='"+pts+"' fill='none' stroke='rgba(255,220,130,.32)' stroke-width='0.7' stroke-dasharray='2 2.4' stroke-linecap='round'/></svg>";
+  t.appendChild(svg);
+  for(i=0;i<STOPS.length;i++){
+    var estado=(i<progresso)?"feito":(i===progresso?"atual":"futuro");
+    var w=el("div","nowrap "+STOPS[i].tipo); w.style.left=POS[i][0]+"%"; w.style.top=POS[i][1]+"%";
+    var no=el("div","no "+estado);
+    var im=el("img"); im.src="img/estrela_grande.png"; no.appendChild(im);
+    if(estado==="atual"){ (function(k){ no.onclick=function(){ STOPS[k].fn(); }; })(i);
+      w.appendChild(el("div","rotulo",STOPS[i].titulo)); }
+    w.appendChild(no); t.appendChild(w);
   }
-  t.appendChild(fagViva());
-  t.appendChild(el("div","dica","Toque na estrela que está brilhando para começar a primeira parada."));
+  var walker=el("div","walker"); walker.style.left=POS[fagPos][0]+"%"; walker.style.top=POS[fagPos][1]+"%";
+  walker.appendChild(fagViva()); t.appendChild(walker);
+  var destino=Math.min(progresso,STOPS.length-1);
+  setTimeout(function(){ walker.style.left=POS[destino][0]+"%"; walker.style.top=POS[destino][1]+"%"; fagPos=destino; },420);
+  t.appendChild(el("div","dica","Toque na estrela que está brilhando."));
+  app.appendChild(t);
+}
+
+/* ============ PARADA 1 — As Caixas de Estrelas (grupos iguais → multiplicação) ============ */
+var P1;
+function telaParada1(){
+  limpa();
+  P1={n:3,m:4,cx:[0,0,0],toques:0,concluida:false,t0:(new Date()).getTime()};
+  var t=el("div","tela parada");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(26));
+  t.appendChild(el("div","balao","Pra acender esta parte do céu, encha <b>3 caixas</b> com <b>4 estrelas</b> em cada! Toque na caixa pra pôr uma estrela (e na estrela pra tirar)."));
+  var wrap=el("div","caixas"); var i;
+  for(i=0;i<P1.n;i++){ wrap.appendChild(fazCaixa(i)); }
+  t.appendChild(wrap);
+  var barra=el("div","p1barra");
+  barra.appendChild(el("div","p1dica",""));
+  var b=el("button","btn2","Recomeçar"); b.onclick=function(){ if(P1.concluida)return; P1.cx=[0,0,0]; pintaCaixas(); }; barra.appendChild(b);
+  t.appendChild(barra);
+  var fw=el("div","fagfala"); fw.appendChild(fagViva()); t.appendChild(fw);
+  app.appendChild(t);
+  pintaCaixas();
+}
+function fazCaixa(i){
+  var c=el("div","caixa"); c.id="cx"+i;
+  c.appendChild(el("div","estrs")); c.appendChild(el("div","cnt","0"));
+  c.onclick=function(){ if(P1.concluida)return; if(P1.cx[i]<9){ P1.cx[i]++; P1.toques++; pintaCaixas(); } };
+  return c;
+}
+function fazEstrInterna(i){
+  var s=el("img","estr"); s.src="img/estrela_grande.png";
+  s.onclick=function(ev){ ev.stopPropagation(); if(P1.concluida)return; if(P1.cx[i]>0){ P1.cx[i]--; pintaCaixas(); } };
+  return s;
+}
+function pintaCaixas(){
+  var i,j;
+  for(i=0;i<P1.n;i++){
+    var c=document.getElementById("cx"+i); if(!c)continue;
+    var h=c.getElementsByClassName("estrs")[0]; h.innerHTML="";
+    for(j=0;j<P1.cx[i];j++){ h.appendChild(fazEstrInterna(i)); }
+    c.getElementsByClassName("cnt")[0].innerHTML=P1.cx[i];
+  }
+  verificaP1();
+}
+function verificaP1(){
+  if(P1.concluida)return;
+  var i, ok=true;
+  for(i=0;i<P1.n;i++){ if(P1.cx[i]!==P1.m){ ok=false; } }
+  var dica=document.getElementsByClassName("p1dica")[0];
+  if(ok){ sucessoP1(); return; }
+  if(dica){
+    var todas=(P1.cx[0]>0&&P1.cx[1]>0&&P1.cx[2]>0);
+    var iguais=(P1.cx[0]===P1.cx[1]&&P1.cx[1]===P1.cx[2]);
+    if(iguais && P1.cx[0]>0 && P1.cx[0]!==P1.m){ dica.innerHTML="Grupos iguais! Mas a fábrica pediu 4 em cada."; }
+    else if(todas && !iguais){ dica.innerHTML="Quase! As 3 caixas precisam ter a MESMA quantidade."; }
+    else { dica.innerHTML=""; }
+  }
+}
+function sucessoP1(){
+  P1.concluida=true;
+  fagComemora();
+  var tela=document.getElementsByClassName("tela parada")[0]; if(!tela)return;
+  estouraEstrelas(tela,12);
+  var bl=tela.getElementsByClassName("balao")[0]; if(bl)bl.style.display="none";
+  var cxs=tela.getElementsByClassName("caixas")[0]; if(cxs)cxs.style.opacity="0";
+  var pb=tela.getElementsByClassName("p1barra")[0]; if(pb)pb.style.display="none";
+  revela(tela,"4 + 4 + 4","3 &#215; 4 = 12","Isso é <b>multiplicar</b>! 3 grupos de 4 dão 12 estrelas. Você acendeu o céu!");
+  botaoProxima(tela,0);
+  var tempo=Math.round(((new Date()).getTime()-P1.t0)/1000);
+  salvaEvid({parada:"p1",habilidade:"EF03MA07",conceito:"grupos iguais",toques:P1.toques,tempo_s:tempo,acertou:true,semErro:(P1.toques===P1.n*P1.m)});
+}
+
+/* ==== PARADAS/TELAS seguintes (preenchidas em blocos) ==== */
+/* ===== PARADA 2 — A Constelação (disposição retangular: fileiras × colunas) ===== */
+var P2;
+function telaParada2(){
+  limpa();
+  P2={fil:2,col:2,alvoF:4,alvoC:5,concluida:false,ajustes:0,t0:(new Date()).getTime()};
+  var t=el("div","tela parada p2");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(28));
+  t.appendChild(el("div","balao","<b>A constelação do Peixe</b> pede <b>4 fileiras</b> com <b>5 estrelas</b> em cada. Monte a grade!"));
+  var g=el("div","grade"); g.id="grade"; t.appendChild(g);
+  var ctr=el("div","steppers");
+  ctr.appendChild(stepper("Fileiras","fil"));
+  ctr.appendChild(stepper("Em cada","col"));
+  t.appendChild(ctr);
+  var bar=el("div","p1barra"); bar.appendChild(el("div","p1dica p2dica","")); t.appendChild(bar);
+  var ff=el("div","fagfala"); ff.appendChild(fagViva()); t.appendChild(ff);
+  app.appendChild(t);
+  pintaGrade();
+}
+function stepper(rot,chave){
+  var s=el("div","stepper"); s.appendChild(el("div","strot",rot));
+  var row=el("div","srow");
+  var menos=el("button","sbtn","&#8722;"); menos.onclick=function(){ if(P2.concluida)return; if(P2[chave]>1){P2[chave]--;P2.ajustes++;pintaGrade();} };
+  var val=el("div","sval"); val.id="sv_"+chave; val.innerHTML=P2[chave];
+  var mais=el("button","sbtn","+"); mais.onclick=function(){ if(P2.concluida)return; if(P2[chave]<6){P2[chave]++;P2.ajustes++;pintaGrade();} };
+  row.appendChild(menos); row.appendChild(val); row.appendChild(mais);
+  s.appendChild(row); return s;
+}
+function pintaGrade(){
+  var g=document.getElementById("grade"); if(!g)return; g.className="grade"; g.innerHTML="";
+  var i,j;
+  for(i=0;i<P2.fil;i++){ var fila=el("div","fila");
+    for(j=0;j<P2.col;j++){ var im=el("img","gestr"); im.src="img/estrela_grande.png"; fila.appendChild(im); }
+    g.appendChild(fila); }
+  var a=document.getElementById("sv_fil"), b=document.getElementById("sv_col");
+  if(a)a.innerHTML=P2.fil; if(b)b.innerHTML=P2.col;
+  verificaP2();
+}
+function verificaP2(){
+  if(P2.concluida)return;
+  var d=document.getElementsByClassName("p2dica")[0];
+  if(P2.fil===P2.alvoF && P2.col===P2.alvoC){ sucessoP2(); return; }
+  if(d){
+    if(P2.fil*P2.col===P2.alvoF*P2.alvoC){ d.innerHTML="Deu 20! Mas a constelação tem a forma de 4 fileiras de 5."; }
+    else if(P2.fil>P2.alvoF||P2.col>P2.alvoC){ d.innerHTML="Passou! Veja: 4 fileiras, 5 estrelas em cada."; }
+    else { d.innerHTML=""; }
+  }
+}
+function sucessoP2(){
+  P2.concluida=true; fagComemora();
+  var tela=document.getElementsByClassName("tela p2")[0]; if(!tela)return;
+  var g=document.getElementById("grade"); if(g)g.className="grade acesa";
+  estouraEstrelas(tela,14);
+  var bl=tela.getElementsByClassName("balao")[0]; if(bl)bl.style.display="none";
+  var st=tela.getElementsByClassName("steppers")[0]; if(st)st.style.opacity="0";
+  revela(tela,"5 + 5 + 5 + 5","4 &#215; 5 = 20","Uma constelação! <b>4 fileiras de 5</b> é 4 &#215; 5 = 20. Cada fileira repete o mesmo tanto — por isso multiplica!");
+  botaoProxima(tela,1);
+  var tempo=Math.round(((new Date()).getTime()-P2.t0)/1000);
+  salvaEvid({parada:"p2",habilidade:"EF03MA07",conceito:"array (linhas x colunas)",ajustes:P2.ajustes,tempo_s:tempo,acertou:true,semErro:(P2.ajustes<=5)});
+}
+/* ===== ALÍVIO 1 — Música das Estrelas (sonificação; grupos iguais por baixo) ===== */
+var audioCtx=null;
+function tocaNota(freq){
+  try{
+    if(!audioCtx){ var AC=window.AudioContext||window.webkitAudioContext; if(!AC)return; audioCtx=new AC(); }
+    if(audioCtx.state==="suspended"){ audioCtx.resume(); }
+    var o=audioCtx.createOscillator(), g=audioCtx.createGain(), t0=audioCtx.currentTime;
+    o.type="triangle"; o.frequency.value=freq;
+    g.gain.setValueAtTime(0.0001,t0);
+    g.gain.linearRampToValueAtTime(0.28,t0+0.02);
+    g.gain.exponentialRampToValueAtTime(0.0008,t0+0.55);
+    o.connect(g); g.connect(audioCtx.destination);
+    o.start(t0); o.stop(t0+0.6);
+  }catch(e){}
+}
+var MUS;
+function telaMusica(){
+  limpa();
+  MUS={tocados:{},qtd:0};
+  var notas=[262,294,330,392,440,523];
+  var t=el("div","tela musica");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(34));
+  t.appendChild(el("div","balao","<b>A Música das Estrelas!</b> Toque nos sininhos e ouça o céu cantar. Cada grupo de estrelas toca a sua nota."));
+  var fileira=el("div","sinos"); var i;
+  for(i=0;i<notas.length;i++){
+    (function(idx,freq){
+      var sino=el("div","sino"); var g=el("div","grupinho"),k;
+      g.style.webkitFilter="hue-rotate("+(idx*52)+"deg)"; g.style.filter="hue-rotate("+(idx*52)+"deg)";
+      for(k=0;k<3;k++){ var im=el("img","sestr"); im.src="img/estrela_grande.png"; g.appendChild(im); }
+      sino.appendChild(g);
+      sino.onclick=function(){
+        tocaNota(freq);
+        sino.className="sino toca";
+        setTimeout(function(){ sino.className="sino"; },260);
+        if(!MUS.tocados[idx]){ MUS.tocados[idx]=1; MUS.qtd++; if(MUS.qtd===notas.length){ musTodos(); } }
+      };
+      fileira.appendChild(sino);
+    })(i,notas[i]);
+  }
+  t.appendChild(fileira);
+  var bar=el("div","p1barra");
+  var ouvir=el("button","btn2","Ouvir a Fagulha tocar"); ouvir.onclick=function(){ musMelodia(notas); };
+  var ok=el("button","btn pulsa","Pronto, seguir"); ok.style.marginLeft="8px"; ok.onclick=function(){ proxima(2); };
+  bar.appendChild(ouvir); bar.appendChild(ok); t.appendChild(bar);
+  var ff=el("div","fagfala"); ff.appendChild(fagViva()); t.appendChild(ff);
+  app.appendChild(t);
+}
+function musMelodia(notas){
+  var seq=[0,1,2,3,4,5,4,2,0], i=0;
+  function passo(){ if(i>=seq.length)return; var s=document.getElementsByClassName("sino")[seq[i]];
+    if(s){ s.className="sino toca"; (function(el2){ setTimeout(function(){ el2.className="sino"; },200); })(s); }
+    tocaNota(notas[seq[i]]); i++; setTimeout(passo,230); }
+  passo();
+}
+function musTodos(){
+  var d=document.getElementsByClassName("balao")[0];
+  if(d)d.innerHTML="<b>Que música linda!</b> Você tocou todos os grupos. Quando quiser, siga a jornada.";
+}
+/* ===== PARADA 3 — Dois jeitos, mesmo céu (comutatividade) ===== */
+function gradeStars(fil,col,cls){
+  var g=el("div",cls||"gradeM"),i,j;
+  for(i=0;i<fil;i++){ var f=el("div","fila"); for(j=0;j<col;j++){ var im=el("img","gestr"); im.src="img/estrela_grande.png"; f.appendChild(im); } g.appendChild(f); }
+  return g;
+}
+function contaFileiras(grade,expr,passo,vezes,cb){
+  var k=0;
+  var iv=setInterval(function(){
+    var filas=grade.getElementsByClassName("fila");
+    if(filas[k]) filas[k].className="fila acesa";
+    k++; expr.innerHTML=passo*k;
+    if(k>=vezes){ clearInterval(iv); setTimeout(cb,500); }
+  },300);
+}
+var P3;
+function telaParada3(){
+  limpa();
+  P3={concluida:false,t0:(new Date()).getTime()};
+  var t=el("div","tela parada p3");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(28));
+  t.appendChild(el("div","balao","A Fagulha arrumou <b>3 fileiras de 4</b> estrelas. Toque em <b>Contar</b> e veja quantas acendem!"));
+  var wrap=el("div","p3wrap"); wrap.id="p3wrap";
+  var expr=el("div","expr"); expr.innerHTML="3 &#215; 4 = <span id='p3cont'>?</span>"; wrap.appendChild(expr);
+  var g=gradeStars(3,4,"gradeM"); g.id="p3grade"; wrap.appendChild(g);
+  t.appendChild(wrap);
+  var bar=el("div","p1barra"); var b=el("button","btn pulsa","Contar"); b.id="p3btn";
+  b.onclick=function(){ p3contar1(); }; bar.appendChild(b); t.appendChild(bar);
+  var ff=el("div","fagfala"); ff.appendChild(fagViva()); t.appendChild(ff);
+  app.appendChild(t);
+}
+function p3contar1(){
+  var b=document.getElementById("p3btn"); if(b)b.disabled=true;
+  var g=document.getElementById("p3grade"), c=document.getElementById("p3cont");
+  contaFileiras(g,c,4,3,function(){
+    var b2=document.getElementById("p3btn"); if(b2){ b2.disabled=false; b2.innerHTML="Vire de lado &#8635;"; b2.onclick=function(){ p3vira(); }; }
+  });
+}
+function p3vira(){
+  var b=document.getElementById("p3btn"); if(b)b.disabled=true;
+  var wrap=document.getElementById("p3wrap"); if(wrap){ wrap.className="p3wrap vira"; }
+  setTimeout(function(){
+    var wrap2=document.getElementById("p3wrap"); if(!wrap2)return;
+    wrap2.innerHTML="";
+    var expr=el("div","expr"); expr.innerHTML="4 &#215; 3 = <span id='p3cont'>?</span>"; wrap2.appendChild(expr);
+    var g=gradeStars(4,3,"gradeM"); g.id="p3grade"; wrap2.appendChild(g);
+    wrap2.className="p3wrap";
+    var bal=document.getElementsByClassName("balao")[0]; if(bal)bal.innerHTML="Agora são <b>4 fileiras de 3</b>. Conte outra vez… quantas acendem?";
+    var b2=document.getElementById("p3btn"); if(b2){ b2.disabled=false; b2.innerHTML="Contar de novo"; b2.onclick=function(){ p3contar2(); }; }
+  },520);
+}
+function p3contar2(){
+  var b=document.getElementById("p3btn"); if(b)b.disabled=true;
+  var g=document.getElementById("p3grade"), c=document.getElementById("p3cont");
+  contaFileiras(g,c,3,4,function(){ sucessoP3(); });
+}
+function sucessoP3(){
+  P3.concluida=true; fagComemora();
+  var tela=document.getElementsByClassName("tela p3")[0]; if(!tela)return;
+  estouraEstrelas(tela,12);
+  var w=document.getElementById("p3wrap"); if(w)w.style.opacity="0";
+  var bl=tela.getElementsByClassName("balao")[0]; if(bl)bl.style.display="none";
+  var pb=tela.getElementsByClassName("p1barra")[0]; if(pb)pb.style.display="none";
+  revela(tela,"3 &#215; 4 = 4 &#215; 3","= 12","Você virou a constelação de lado e deu o <b>mesmo</b> tanto! 3&#215;4 e 4&#215;3 são iguais — isso vale sempre.");
+  botaoProxima(tela,3);
+  var tempo=Math.round(((new Date()).getTime()-P3.t0)/1000);
+  salvaEvid({parada:"p3",habilidade:"EF03MA07",conceito:"comutatividade",tempo_s:tempo,acertou:true});
+}
+/* ===== PARADA 4 — O Céu Grande (×10 como atalho) ===== */
+var P4;
+function telaParada4(){
+  limpa();
+  P4={caixas:0,alvo:5,toques:0,concluida:false,t0:(new Date()).getTime()};
+  var t=el("div","tela parada p4");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(24));
+  t.appendChild(el("div","balao","O céu precisa de <b>muitas</b> estrelas, e rápido! Cada <b>caixa mágica</b> solta <b>10 de uma vez</b>. Encha o céu com <b>50</b>!"));
+  var sky=el("div","p4sky"); sky.id="p4sky"; t.appendChild(sky);
+  var expr=el("div","expr p4expr"); expr.id="p4expr"; expr.innerHTML="0 &#215; 10 = 0"; t.appendChild(expr);
+  var bar=el("div","p1barra"); var b=el("button","btn pulsa","Soltar 10 estrelas"); b.id="p4btn";
+  b.onclick=function(){ p4solta(); }; bar.appendChild(b); t.appendChild(bar);
+  var ff=el("div","fagfala"); ff.appendChild(fagViva()); t.appendChild(ff);
+  app.appendChild(t);
+}
+function p4solta(){
+  if(P4.concluida||P4.caixas>=P4.alvo)return;
+  P4.caixas++; P4.toques++;
+  var sky=document.getElementById("p4sky");
+  if(sky){ var cl=el("div","cluster"),k; for(k=0;k<10;k++){ var im=el("img","cestr"); im.src="img/estrela_grande.png"; cl.appendChild(im); } sky.appendChild(cl); }
+  var tot=P4.caixas*10;
+  var e=document.getElementById("p4expr"); if(e)e.innerHTML=P4.caixas+" &#215; 10 = "+tot;
+  if(P4.caixas>=P4.alvo){ var b=document.getElementById("p4btn"); if(b)b.disabled=true; setTimeout(sucessoP4,550); }
+}
+function sucessoP4(){
+  P4.concluida=true; fagComemora();
+  var tela=document.getElementsByClassName("tela p4")[0]; if(!tela)return;
+  estouraEstrelas(tela,16);
+  var bl=tela.getElementsByClassName("balao")[0]; if(bl)bl.style.display="none";
+  var sky=document.getElementById("p4sky"); if(sky)sky.style.opacity="0";
+  var pb=tela.getElementsByClassName("p1barra")[0]; if(pb)pb.style.display="none";
+  var e=document.getElementById("p4expr"); if(e)e.style.display="none";
+  revela(tela,"10 + 10 + 10 + 10 + 10","5 &#215; 10 = 50","O <b>dez</b> é um atalho poderoso! Com caixas de 10 o céu enche voando. Some 10 em 10: 10, 20, 30, 40, 50.");
+  botaoProxima(tela,4);
+  var tempo=Math.round(((new Date()).getTime()-P4.t0)/1000);
+  salvaEvid({parada:"p4",habilidade:"EF03MA07",conceito:"x10 (atalho)",toques:P4.toques,tempo_s:tempo,acertou:true,semErro:(P4.toques===P4.alvo)});
+}
+/* ===== ALÍVIO 2 — Monte a Constelação (memória: grupo ↔ total) ===== */
+var MEM;
+function telaMemoria(){
+  limpa();
+  var pares=[{g:[2,4],n:8},{g:[3,4],n:12},{g:[5,2],n:10},{g:[4,5],n:20}];
+  var cartas=[],i;
+  for(i=0;i<pares.length;i++){ cartas.push({par:i,tipo:"g",fil:pares[i].g[0],col:pares[i].g[1]}); cartas.push({par:i,tipo:"n",n:pares[i].n}); }
+  for(i=cartas.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var tmp=cartas[i]; cartas[i]=cartas[j]; cartas[j]=tmp; }
+  MEM={cartas:cartas,abertas:[],feitos:0,total:pares.length,trava:false};
+  var t=el("div","tela memoria");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(30));
+  t.appendChild(el("div","balao","<b>Monte a Constelação!</b> Ligue cada <b>grupo</b> de estrelas ao seu <b>total</b>. Vire duas cartas e ache os pares."));
+  var grid=el("div","memgrid");
+  for(i=0;i<cartas.length;i++){
+    (function(idx){
+      var c=cartas[idx];
+      var card=el("div","mcard"); card.id="mc"+idx;
+      var dorso=el("div","dorso"); var di=el("img"); di.src="img/estrela_grande.png"; dorso.appendChild(di);
+      var face=el("div","face");
+      if(c.tipo==="g"){ face.appendChild(gradeStars(c.fil,c.col,"gradeMini")); }
+      else { face.appendChild(el("div","memnum",""+c.n)); }
+      card.appendChild(dorso); card.appendChild(face);
+      card.onclick=function(){ viraCarta(idx); };
+      grid.appendChild(card);
+    })(i);
+  }
+  t.appendChild(grid);
+  var bar=el("div","p1barra"); var ok=el("button","btn2","Pular"); ok.onclick=function(){ proxima(5); }; bar.appendChild(ok); t.appendChild(bar);
+  var ff=el("div","fagfala"); ff.appendChild(fagViva()); t.appendChild(ff);
+  app.appendChild(t);
+}
+function viraCarta(idx){
+  if(MEM.trava)return;
+  var card=document.getElementById("mc"+idx); if(!card)return;
+  if(card.className.indexOf("aberta")>=0||card.className.indexOf("par")>=0)return;
+  card.className="mcard aberta";
+  MEM.abertas.push(idx);
+  if(MEM.abertas.length===2){
+    MEM.trava=true;
+    var a=MEM.abertas[0], b=MEM.abertas[1];
+    if(MEM.cartas[a].par===MEM.cartas[b].par){
+      setTimeout(function(){
+        var ca=document.getElementById("mc"+a), cb=document.getElementById("mc"+b);
+        if(ca)ca.className="mcard par"; if(cb)cb.className="mcard par";
+        MEM.feitos++; MEM.abertas=[]; MEM.trava=false;
+        tocaNota(392);
+        if(MEM.feitos>=MEM.total){ memFim(); }
+      },420);
+    } else {
+      setTimeout(function(){
+        var ca=document.getElementById("mc"+a), cb=document.getElementById("mc"+b);
+        if(ca)ca.className="mcard"; if(cb)cb.className="mcard";
+        MEM.abertas=[]; MEM.trava=false;
+      },820);
+    }
+  }
+}
+function memFim(){
+  var d=document.getElementsByClassName("balao")[0];
+  if(d)d.innerHTML="<b>Você ligou todos os grupos ao total!</b> Cada grupo igual vira uma multiplicação. Siga a jornada!";
+  var bar=document.getElementsByClassName("p1barra")[0];
+  if(bar){ bar.innerHTML=""; var nx=el("button","btn pulsa","Próxima parada"); nx.onclick=function(){ proxima(5); }; bar.appendChild(nx); }
+  var tela=document.getElementsByClassName("tela memoria")[0]; if(tela) estouraEstrelas(tela,10);
+  fagComemora();
+}
+/* ===== PARADA 5 — A Sua Constelação (autoria + efeito protégé) ===== */
+var P5;
+function telaParada5(){
+  limpa();
+  P5={fil:3,col:3,fase:"build",claim:0,real:0,tent:0,protegeErrou:false,concluida:false,t0:(new Date()).getTime()};
+  var t=el("div","tela parada p5 p2");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(26));
+  t.appendChild(el("div","balao","<b>Agora o mestre é você!</b> Monte a SUA constelação: escolha as fileiras e quantas estrelas em cada."));
+  var g=el("div","grade"); g.id="p5grade"; t.appendChild(g);
+  var ctr=el("div","steppers");
+  ctr.appendChild(p5stepper("Fileiras","fil"));
+  ctr.appendChild(p5stepper("Em cada","col"));
+  t.appendChild(ctr);
+  var opts=el("div","opts"); opts.id="p5opts"; t.appendChild(opts);
+  var bar=el("div","p1barra"); var b=el("button","btn pulsa","Pronto, é essa!"); b.id="p5btn"; b.onclick=function(){ p5pronto(); }; bar.appendChild(b); t.appendChild(bar);
+  var ff=el("div","fagfala"); ff.appendChild(fagViva()); t.appendChild(ff);
+  app.appendChild(t);
+  p5pinta();
+}
+function p5stepper(rot,chave){
+  var s=el("div","stepper"); s.appendChild(el("div","strot",rot));
+  var row=el("div","srow");
+  var menos=el("button","sbtn","&#8722;"); menos.onclick=function(){ if(P5.fase!=="build")return; if(P5[chave]>2){P5[chave]--;p5pinta();} };
+  var val=el("div","sval"); val.id="p5sv_"+chave; val.innerHTML=P5[chave];
+  var mais=el("button","sbtn","+"); mais.onclick=function(){ if(P5.fase!=="build")return; if(P5[chave]<5){P5[chave]++;p5pinta();} };
+  row.appendChild(menos); row.appendChild(val); row.appendChild(mais);
+  s.appendChild(row); return s;
+}
+function p5pinta(){
+  var g=document.getElementById("p5grade"); if(!g)return; g.className="grade"; g.innerHTML=""; var i,j;
+  for(i=0;i<P5.fil;i++){ var f=el("div","fila"); for(j=0;j<P5.col;j++){ var im=el("img","gestr"); im.src="img/estrela_grande.png"; f.appendChild(im); } g.appendChild(f); }
+  var a=document.getElementById("p5sv_fil"),b=document.getElementById("p5sv_col"); if(a)a.innerHTML=P5.fil; if(b)b.innerHTML=P5.col;
+}
+function p5pronto(){
+  P5.fase="judge"; P5.real=P5.fil*P5.col;
+  var claim=P5.real;
+  if(Math.random()<0.5){
+    var cand=[P5.real+1,P5.real-1,P5.real+P5.col,P5.real-P5.col];
+    var pick=cand[Math.floor(Math.random()*cand.length)];
+    if(pick<=0||pick===P5.real)pick=P5.real+1;
+    claim=pick; P5.protegeErrou=true;
+  }
+  P5.claim=claim;
+  var st=document.getElementsByClassName("steppers")[0]; if(st)st.style.display="none";
+  var bar=document.getElementsByClassName("p1barra")[0]; if(bar)bar.style.display="none";
+  var bal=document.getElementsByClassName("balao")[0];
+  if(bal)bal.innerHTML="A Fagulha olha e diz: <b>“Acho que "+P5.fil+" fileiras de "+P5.col+" dá "+claim+"…”</b> Confere pra ela: <b>quanto dá de verdade?</b>";
+  fagPose("fagulha_pensa");
+  var reais={}; var lista=[P5.real]; reais[P5.real]=1;
+  var extra=[claim,P5.real+1,P5.real-1,P5.real+P5.col];
+  var i;
+  for(i=0;i<extra.length && lista.length<3;i++){ var v=extra[i]; if(v>0 && !reais[v]){ reais[v]=1; lista.push(v); } }
+  while(lista.length<3){ var v2=P5.real+lista.length; if(!reais[v2]){reais[v2]=1;lista.push(v2);} }
+  for(i=lista.length-1;i>0;i--){ var j2=Math.floor(Math.random()*(i+1)); var tmp=lista[i]; lista[i]=lista[j2]; lista[j2]=tmp; }
+  var oc=document.getElementById("p5opts"); if(oc){ oc.innerHTML=""; var row=el("div","optrow");
+    for(i=0;i<lista.length;i++){ (function(val){ var bt=el("button","optbtn",""+val); bt.onclick=function(){ p5responde(val); }; row.appendChild(bt); })(lista[i]); }
+    oc.appendChild(row);
+    oc.appendChild(el("div","p1dica p5dica","")); }
+}
+function p5responde(val){
+  if(P5.concluida||P5.fase!=="judge")return; P5.tent++;
+  if(val===P5.real){ sucessoP5(); return; }
+  var d=document.getElementsByClassName("p5dica")[0];
+  var oc=document.getElementById("p5opts"); var btns=oc?oc.getElementsByTagName("button"):[];
+  var k; for(k=0;k<btns.length;k++){ btns[k].disabled=true; }
+  var g=document.getElementById("p5grade");
+  if(d)d.innerHTML="Vamos contar as fileiras juntas…";
+  var passoTxt=el("span"); if(d){ d.innerHTML="Contando: "; d.appendChild(passoTxt); }
+  contaFileiras(g,passoTxt,P5.col,P5.fil,function(){
+    if(d)d.innerHTML="São "+P5.fil+" fileiras de "+P5.col+" = <b>"+P5.real+"</b>. Toque no número certo!";
+    var kk; for(kk=0;kk<btns.length;kk++){ btns[kk].disabled=false; }
+    var g2=document.getElementById("p5grade"); if(g2){ var fs=g2.getElementsByClassName("fila"),z; for(z=0;z<fs.length;z++)fs[z].className="fila"; }
+  });
+}
+function sucessoP5(){
+  P5.concluida=true; fagComemora();
+  var tela=document.getElementsByClassName("tela p5")[0]; if(!tela)return;
+  estouraEstrelas(tela,16);
+  var g=document.getElementById("p5grade"); if(g)g.className="grade acesa";
+  var oc=document.getElementById("p5opts"); if(oc)oc.style.display="none";
+  var bl=tela.getElementsByClassName("balao")[0]; if(bl)bl.style.display="none";
+  var extra=P5.protegeErrou?("Você ainda me corrigiu — eu tinha dito "+P5.claim+"! "):"";
+  revela(tela,P5.fil+" fileiras de "+P5.col,P5.fil+" &#215; "+P5.col+" = "+P5.real,extra+"Você <b>criou e resolveu</b> a sua própria constelação. Você é o mestre das estrelas!");
+  botaoProxima(tela,6,"Última parada");
+  var tempo=Math.round(((new Date()).getTime()-P5.t0)/1000);
+  salvaEvid({parada:"p5",habilidade:"EF03MA07",conceito:"autoria + protégé",criou:[P5.fil,P5.col],real:P5.real,corrigiu:P5.protegeErrou,tentativas:P5.tent,acertou:true,semErro:(P5.tent===1)});
+}
+/* ===== DELEITE — Decore o Seu Céu (criação livre) ===== */
+var DECO;
+function telaDecore(){
+  limpa();
+  DECO={hue:0,n:0};
+  var t=el("div","tela decore");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(30));
+  t.appendChild(el("div","balao","<b>Este céu é seu!</b> Toque onde quiser e enfeite do seu jeito — aqui não tem certo nem errado."));
+  var sky=el("div","decoceu"); sky.id="decoceu";
+  sky.onclick=function(ev){ decoPoe(ev,sky); };
+  t.appendChild(sky);
+  var pal=el("div","paleta"); var cores=[0,140,210,300]; var i;
+  for(i=0;i<cores.length;i++){ (function(h,idx){
+    var c=el("button","pcor"+(idx===0?" sel":"")); c.style.webkitFilter="hue-rotate("+h+"deg)"; c.style.filter="hue-rotate("+h+"deg)";
+    var im=el("img"); im.src="img/estrela_grande.png"; c.appendChild(im);
+    c.onclick=function(){ DECO.hue=h; var ps=document.getElementsByClassName("pcor"),z; for(z=0;z<ps.length;z++)ps[z].className="pcor"; c.className="pcor sel"; };
+    pal.appendChild(c);
+  })(cores[i],i); }
+  t.appendChild(pal);
+  var bar=el("div","p1barra"); var ok=el("button","btn pulsa","Pronto, terminei!"); ok.onclick=function(){ proxima(7); }; bar.appendChild(ok); t.appendChild(bar);
+  var ff=el("div","fagfala"); ff.appendChild(fagViva()); t.appendChild(ff);
+  app.appendChild(t);
+}
+function decoPoe(ev,sky){
+  if(DECO.n>=70)return;
+  var r=sky.getBoundingClientRect();
+  var x=((ev.clientX-r.left)/r.width)*100, y=((ev.clientY-r.top)/r.height)*100;
+  if(x<0||x>100||y<0||y>100)return;
+  var s=el("img","decostar"); s.src="img/estrela_grande.png";
+  var tam=(16+Math.random()*22).toFixed(0);
+  s.style.width=tam+"px"; s.style.left=x+"%"; s.style.top=y+"%";
+  s.style.webkitFilter="hue-rotate("+DECO.hue+"deg) drop-shadow(0 0 7px rgba(255,220,120,.9))";
+  s.style.filter="hue-rotate("+DECO.hue+"deg) drop-shadow(0 0 7px rgba(255,220,120,.9))";
+  sky.appendChild(s); DECO.n++;
+  tocaNota(330+DECO.hue*0.6);
+}
+/* ===== FINAL (cutscene) + PARECER ===== */
+function telaFinal(){
+  limpa();
+  var t=el("div","tela fim");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(90));
+  var fv=fabViva(); fv.className="fabviva destino"; fv.style.top="8%"; t.appendChild(fv);
+  var fag=el("div","fimfag"); fag.appendChild(fagViva()); t.appendChild(fag);
+  fagComemora();
+  var tit=el("div","fimtit","Você encheu o céu de estrelas!"); t.appendChild(tit);
+  var sub=el("div","fimsub","A Fábrica de Estrelas está brilhando por sua causa."); t.appendChild(sub);
+  var bar=el("div","p1barra"); bar.style.bottom="8%";
+  var b=el("button","btn pulsa","Ver como você foi"); b.onclick=function(){ telaParecer(); }; bar.appendChild(b); t.appendChild(bar);
+  app.appendChild(t);
+  var i; for(i=0;i<3;i++){ (function(d){ setTimeout(function(){ estouraEstrelas(t,16); },d); })(i*600);
+  }
+}
+function lerEvid(){ try{ return JSON.parse(localStorage.getItem("estrelas_evid")||"[]"); }catch(e){ return []; } }
+function parecerDados(){
+  var ev=lerEvid(), map={}, i;
+  for(i=0;i<ev.length;i++){ if(ev[i].parada) map[ev[i].parada]=ev[i]; }
+  var paradas=["p1","p2","p3","p4","p5"], fez=0, fluente=0, k;
+  for(k=0;k<paradas.length;k++){ var e=map[paradas[k]]; if(e&&e.acertou){ fez++; if(e.semErro) fluente++; } }
+  var nivel = fluente>=5?"Avançado":(fluente>=3?"Adequado":"Em desenvolvimento");
+  return {map:map,fez:fez,fluente:fluente,total:paradas.length,nivel:nivel};
+}
+function telaParecer(){
+  limpa();
+  var d=parecerDados();
+  var t=el("div","tela parecer");
+  t.appendChild(el("div","ceu")); t.appendChild(campoEstrelas(30));
+  var card=el("div","diploma");
+  card.appendChild(el("div","selo",""));
+  card.appendChild(el("h2","dtit","Mestre das Estrelas"));
+  card.appendChild(el("div","dsub","Você acendeu o céu inteiro! Agora você sabe que multiplicar é juntar grupos iguais — e ainda ensinou a Fagulha."));
+  card.appendChild(el("div","destrelas","&#9733; &#9733; &#9733; &#9733; &#9733;"));
+  t.appendChild(card);
+  var prof=el("div","profcard");
+  var txt="<b>Para o professor</b> &#183; EF03MA07 (multiplicação)<br>";
+  txt+="O estudante concluiu <b>"+d.fez+" de "+d.total+"</b> paradas de aprendizado. ";
+  if(d.map.p1) txt+="Compreende a multiplicação como <b>grupos iguais</b>. ";
+  if(d.map.p2) txt+="Reconhece a <b>disposição retangular (array)</b> como linhas × colunas, ligada à adição de parcelas iguais. ";
+  if(d.map.p3) txt+="Percebeu a <b>comutatividade</b> (3×4 = 4×3). ";
+  if(d.map.p4) txt+="Usou o <b>×10</b> como atalho. ";
+  if(d.map.p5){ txt+="<b>Criou e resolveu</b> a própria constelação"; if(d.map.p5.corrigiu) txt+=" e <b>corrigiu</b> a mascote (efeito protégé)"; txt+="."; }
+  txt+="<br>Fluência: <b>"+d.fluente+" de "+d.total+"</b> paradas sem tropeços. Nível sugerido: <b>"+d.nivel+"</b>.";
+  txt+="<br><span class='pobs'>Parecer inicial, honesto e por indicadores. Registro local nesta sessão.</span>";
+  prof.innerHTML=txt;
+  t.appendChild(prof);
+  var bar=el("div","p1barra"); bar.style.bottom="4%";
+  var again=el("button","btn2","Jogar de novo"); again.onclick=function(){ progresso=0; fagPos=0; try{ localStorage.removeItem("estrelas_evid"); }catch(e){} telaCapa(); };
+  bar.appendChild(again); t.appendChild(bar);
   app.appendChild(t);
 }
 
